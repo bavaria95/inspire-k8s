@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: scrapydz-deploy
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        service: scrapydz-deploy
+    spec:
+      containers:
+      - args:
+        - scrapyd-deploy
+        image: bavaria/inspire-base
+        name: scrapydz-deploy
+        resources: {}
+        workingDir: /virtualenv/lib/python2.7/site-packages/hepcrawl
+      restartPolicy: Always
+status: {}

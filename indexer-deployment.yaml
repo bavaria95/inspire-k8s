@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: indexer
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        service: indexer
+    spec:
+      containers:
+      - args:
+        - elasticsearch
+        - -Dcluster.name=inspire
+        - -Ddiscovery.zen.ping.multicast.enabled=false
+        env:
+        - name: ES_HEAP_SIZE
+          value: 2g
+        - name: APP_SERVER_NAME
+          value: cveedback.co:31111
+        image: inspirehep/elasticsearch
+        name: indexer
+        ports:
+        - containerPort: 9200
+        resources: {}
+      restartPolicy: Always
+status: {}

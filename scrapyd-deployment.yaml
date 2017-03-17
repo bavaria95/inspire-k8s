@@ -1,0 +1,45 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: scrapyd
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        service: scrapyd
+    spec:
+      containers:
+      - args:
+        - scrapyd
+        env:
+        - name: APP_SQLALCHEMY_DATABASE_URI
+          value: postgresql+psycopg2://inspirehep:dbpass123@database:5432/inspirehep
+        - name: APP_BROKER_URL
+          value: amqp://guest:guest@rabbitmq:5672//
+        - name: APP_CELERY_RESULT_BACKEND
+          value: amqp://guest:guest@rabbitmq:5672//
+        - name: APP_CACHE_REDIS_URL
+          value: redis://redis:6379/0
+        - name: APP_ACCOUNTS_SESSION_REDIS_URL
+          value: redis://redis:6379/2
+        - name: APP_SEARCH_ELASTIC_HOSTS
+          value: indexer
+        - name: APP_ES_BULK_TIMEOUT
+          value: "240"
+        - name: APP_CRAWLER_HOST_URL
+          value: http://scrapyd:6800
+        - name: APP_CRAWLER_API_PIPELINE_URL
+          value: http://zflower:5555/api/task/async-apply
+        - name: APP_OAIHARVESTER_WORKDIR
+          value: /virtualenv/oaiharvest_workdir
+        - name: APP_SERVER_NAME
+          value: cveedback.co:31111
+        image: bavaria/inspire-base
+        name: scrapyd
+        resources: {}
+      restartPolicy: Always
+status: {}
