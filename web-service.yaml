@@ -6,10 +6,8 @@ metadata:
     service: web
   name: web
 spec:
-  type: NodePort
   ports:
   - name: "5000"
-    nodePort: 32222
     port: 5000
     targetPort: 5000
   selector:

@@ -6,7 +6,6 @@ metadata:
     service: zflower
   name: zflower
 spec:
-  type: NodePort
   ports:
   - name: "5555"
     port: 5555
