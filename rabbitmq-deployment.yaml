@@ -13,7 +13,10 @@ spec:
         service: rabbitmq
     spec:
       containers:
-      - image: rabbitmq
+      - env:
+        - name: APP_SERVER_NAME
+          value: cveedback.co:5000
+        image: rabbitmq
         name: rabbitmq
         resources: {}
       restartPolicy: Always

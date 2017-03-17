@@ -21,7 +21,7 @@ spec:
         - name: PGDATA
           value: /var/lib/postgresql/data/pgdata
         - name: APP_SERVER_NAME
-          value: cveedback.co
+          value: cveedback.co:5000
         image: postgres
         name: database
         resources: {}

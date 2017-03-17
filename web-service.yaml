@@ -8,10 +8,10 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - name: "80"
-    nodePort: 80
-    port: 80
-    targetPort: 80
+  - name: "5000"
+    nodePort: 5000
+    port: 5000
+    targetPort: 5000
   selector:
     service: web
 status:

@@ -13,7 +13,10 @@ spec:
         service: redis
     spec:
       containers:
-      - image: redis
+      - env:
+        - name: APP_SERVER_NAME
+          value: cveedback.co:5000
+        image: redis
         name: redis
         resources: {}
       restartPolicy: Always

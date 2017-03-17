@@ -16,7 +16,7 @@ spec:
       - args:
         - gunicorn
         - -b
-        - 0.0.0.0:80
+        - 0.0.0.0:5000
         - -t
         - "3600"
         - --access-logfile
@@ -44,11 +44,11 @@ spec:
         - name: APP_OAIHARVESTER_WORKDIR
           value: /virtualenv/oaiharvest_workdir
         - name: APP_SERVER_NAME
-          value: cveedback.co
+          value: cveedback.co:5000
         image: bavaria/inspire-base
         name: web
         ports:
-        - containerPort: 80
+        - containerPort: 5000
         resources: {}
       restartPolicy: Always
 status: {}
