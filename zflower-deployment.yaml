@@ -40,7 +40,7 @@ spec:
         - name: APP_OAIHARVESTER_WORKDIR
           value: /virtualenv/oaiharvest_workdir
         - name: APP_SERVER_NAME
-          value: web
+          value: cveedback.co
         image: bavaria/inspire-base
         name: zflower
         ports:
