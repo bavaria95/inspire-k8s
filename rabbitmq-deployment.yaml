@@ -15,7 +15,7 @@ spec:
       containers:
       - env:
         - name: APP_SERVER_NAME
-          value: testtest
+          value: web
         image: rabbitmq
         name: rabbitmq
         resources: {}
