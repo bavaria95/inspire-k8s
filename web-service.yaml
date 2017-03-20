@@ -6,6 +6,7 @@ metadata:
     service: web
   name: web
 spec:
+  type: NodePort
   ports:
   - name: "80"
     port: 80

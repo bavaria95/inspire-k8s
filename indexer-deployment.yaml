@@ -20,8 +20,8 @@ spec:
         env:
         - name: ES_HEAP_SIZE
           value: 2g
-        - name: APP_SERVER_NAME
-          value: testtest
+        # - name: APP_SERVER_NAME
+        #   value: testtest
         image: inspirehep/elasticsearch
         name: indexer
         ports:
