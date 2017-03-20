@@ -48,7 +48,7 @@ spec:
         image: bavaria/inspire-base
         name: web
         ports:
-        - containerPort: 31111
+        - containerPort: 82
         resources: {}
       restartPolicy: Always
 status: {}

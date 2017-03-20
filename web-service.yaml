@@ -8,7 +8,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - name: "31111"
+  - name: "81"
     port: 31111
     targetPort: 31111
     nodePort: 31111
