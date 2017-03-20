@@ -16,7 +16,7 @@ spec:
       - args:
         - gunicorn
         - -b
-        - 0.0.0.0:31111
+        - 0.0.0.0:80
         - -t
         - "3600"
         - --access-logfile

@@ -9,8 +9,8 @@ spec:
   type: NodePort
   ports:
   - name: "80"
-    port: 31111
-    targetPort: 31111
+    port: 80
+    targetPort: 80
     nodePort: 31111
   selector:
     service: web
