@@ -39,8 +39,8 @@ spec:
           value: http://zflower:5555/api/task/async-apply
         - name: APP_OAIHARVESTER_WORKDIR
           value: /virtualenv/oaiharvest_workdir
-        # - name: APP_SERVER_NAME
-        #   value: testtest
+        - name: APP_SERVER_NAME
+          value: testtest
         image: bavaria/inspire-base
         name: zflower
         ports:

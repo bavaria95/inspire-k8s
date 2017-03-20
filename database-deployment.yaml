@@ -20,8 +20,8 @@ spec:
           value: inspirehep
         - name: PGDATA
           value: /var/lib/postgresql/data/pgdata
-        # - name: APP_SERVER_NAME
-        #   value: testtest
+        - name: APP_SERVER_NAME
+          value: testtest
         image: postgres
         name: database
         resources: {}
