@@ -16,7 +16,7 @@ spec:
       - args:
         - gunicorn
         - -b
-        - 0.0.0.0:80
+        - 0.0.0.0:31111
         - -t
         - "3600"
         - --access-logfile
@@ -48,7 +48,7 @@ spec:
         image: bavaria/inspire-base
         name: web
         ports:
-        - containerPort: 80
+        - containerPort: 31111
         resources: {}
       restartPolicy: Always
 status: {}
