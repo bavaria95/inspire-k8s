@@ -21,7 +21,7 @@ spec:
         - name: PGDATA
           value: /var/lib/postgresql/data/pgdata
         - name: APP_SERVER_NAME
-          value: web
+          value: web:31111
         image: postgres
         name: database
         resources: {}

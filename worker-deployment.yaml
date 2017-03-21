@@ -43,7 +43,7 @@ spec:
         - name: APP_OAIHARVESTER_WORKDIR
           value: /virtualenv/oaiharvest_workdir
         - name: APP_SERVER_NAME
-          value: web
+          value: web:31111
         image: bavaria/inspire-base
         name: worker
         resources: {}
