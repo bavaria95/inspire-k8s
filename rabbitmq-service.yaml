@@ -8,9 +8,9 @@ metadata:
 spec:
   clusterIP: None
   ports:
-  - name: headless
-    port: 55555
-    targetPort: 0
+  - name: "5672"
+    port: 5672
+    targetPort: 5672
   selector:
     service: rabbitmq
 status:

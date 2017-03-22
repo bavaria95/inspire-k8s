@@ -18,6 +18,8 @@ spec:
           value: web:31111
         image: rabbitmq
         name: rabbitmq
+        ports:
+        - containerPort: 31111
         resources: {}
       restartPolicy: Always
 status: {}

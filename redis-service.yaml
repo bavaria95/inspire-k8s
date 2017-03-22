@@ -8,9 +8,9 @@ metadata:
 spec:
   clusterIP: None
   ports:
-  - name: headless
-    port: 55555
-    targetPort: 0
+  - name: "6379"
+    port: 6379
+    targetPort: 6379
   selector:
     service: redis
 status:
