@@ -6,7 +6,6 @@ metadata:
     service: worker
   name: worker
 spec:
-  clusterIP: None
   ports:
   - name: headless
     port: 55555

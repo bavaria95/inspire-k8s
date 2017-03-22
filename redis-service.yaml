@@ -6,7 +6,6 @@ metadata:
     service: redis
   name: redis
 spec:
-  clusterIP: None
   ports:
   - name: "6379"
     port: 6379

@@ -6,7 +6,6 @@ metadata:
     service: rabbitmq
   name: rabbitmq
 spec:
-  clusterIP: None
   ports:
   - name: "5672"
     port: 5672
